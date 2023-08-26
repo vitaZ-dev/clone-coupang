@@ -1,0 +1,41 @@
+.header {
+  border-bottom: 1px solid #eee;
+}
+
+/* login-bar */
+.login-bar {
+  height: 32px;
+  background: #f0f0f0;
+  color: #333;
+}
+.login-bar .inner {
+  height: 100%;
+}
+.login-bar .inner ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.login-bar .inner ul li {
+  padding-left: 10px;
+  font-size: 11px;
+}
+.login-bar .inner ul li:first-child {
+  padding-left: 0;
+}
+
+/* main-bar */
+.main-bar > .inner {
+  display: grid;
+  grid-template-columns: 110px 30px 1fr 130px;
+  grid-template-rows: 75% 25%;
+}
+.goods-category {
+  position: relative;
+}
+.category-btn {
+  width: 110px;
+  height: 115px;
+  background: #4285f4;
+  font-size: 13px;
+}
