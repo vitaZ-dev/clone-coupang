@@ -3,4 +3,6 @@
 @import url('./base/reset.css');
 @import url('./base/base.css');
 
+@import url('./components/icon.css');
+
 @import url('./layout/header.css');

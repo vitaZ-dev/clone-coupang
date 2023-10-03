@@ -1,0 +1,40 @@
+.ico-new {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  background: url('../../images/icon/ico-new.png') center no-repeat;
+  background-size: cover;
+}
+.ico-rocket {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 5px;
+  right: 2px;
+  background: url('../../images/icon/ico-rocket.png') center no-repeat;
+  background-size: cover;
+}
+.ico-government {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 5px;
+  right: 2px;
+  background: url('../../images/icon/icon_government_promotion.png') center no-repeat;
+  background-size: cover;
+}
+.ico-travel {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 5px;
+  right: 2px;
+  background: url('../../images/icon/icon_travel.png') center no-repeat;
+  background-size: cover;
+}
