@@ -51,6 +51,7 @@
               <span>카테고리</span>
             </button>
             <div class="category-nav">
+              <!-- 카테고리별 내비게이션(메뉴) 영역 -->
               <ul class="category-list">
                 <li></li>
                 <li></li>
@@ -69,9 +70,63 @@
               </h1>
             </div>
             <!-- 검색영역 -->
-            <div class="search-area"></div>
+            <div class="search-area">
+              <form>
+                <div class="drop-down">
+                  <select name="select-bar" id="select-bar">
+                    <option value="00">전체</option>
+                  </select>
+                </div>
+                <input type="search" placeholder="찾고 싶은 상품을 검색해 보세요!" style="width: 301px;">
+                <button class="mic-btn" aria-label="voice search button">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6 10.3542C10.6 7.94943 12.5699 6 15 6C17.4301 6 19.4 7.94943 19.4 10.3542V17.4792C19.4 19.8839 17.4301 21.8333 15 21.8333C12.5699 21.8333 10.6 19.8839 10.6 17.4792V10.3542ZM18.2 13.9167V10.3542C18.2 8.60527 16.7673 7.1875 15 7.1875C13.2327 7.1875 11.8 8.60526 11.8 10.3542V13.9167H18.2Z" fill="#767676"/>
+                    <path d="M15.4 23.6196C18.5272 23.4159 21 20.8413 21 17.6951V13.125H19.8V17.6951C19.8 20.3184 17.651 22.4451 15 22.4451C12.349 22.4451 10.2 20.3184 10.2 17.6951V13.125H9V17.6951C9 20.8413 11.4728 23.4159 14.6 23.6196V24.2083H11.4V25H18.6V24.2083H15.4V23.6196Z" fill="#767676"/>
+                  </svg>
+                </button>
+                <button class="search-btn" aria-label="search button">
+                  <svg width="30" height="30" viewBox="0 0 30 30"  fill="#0074E9" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0723 19.5333C16.8108 20.4812 15.2413 21.043 13.5403 21.043C9.37589 21.043 6 17.6755 6 13.5215C6 9.36749 9.37589 6 13.5403 6C17.7046 6 21.0805 9.36749 21.0805 13.5215C21.0805 15.4068 20.3851 17.1301 19.2363 18.4501L24 22.8365L22.9233 24L18.0723 19.5333ZM19.4931 13.5215C19.4931 16.801 16.8279 19.4595 13.5403 19.4595C10.2526 19.4595 7.58742 16.801 7.58742 13.5215C7.58742 10.242 10.2526 7.58348 13.5403 7.58348C16.8279 7.58348 19.4931 10.242 19.4931 13.5215Z"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
             <!-- 아이콘메뉴 -->
-            <div class="util-menu"></div>
+            <div class="util-menu">
+              <ul>
+                <li class="my-coupang">
+                  <button type="button">
+                    <span class="my-coupang-btn"></span>
+                    <span>마이쿠팡</span>
+                  </button>
+                  <div class="my-coupang-list">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                      <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                    </svg>
+                    <ul class="wrapper">
+                      <li><a href="/">주문목록</a></li>
+                      <li><a href="/">취소/반품</a></li>
+                      <li><a href="/">찜리스트</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="cart">
+                  <button type="button">
+                    <span class="cart-btn"></span>
+                    <span>장바구니</span>
+                  </button>
+                  <div class="cart-item-count">0</div>
+                  <div class="cart-area">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                      <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                    </svg>
+                    <ul class="cart-wrapper">
+                      <li>장바구니에 담긴 상품이 없습니다.</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
           <!-- 네비게이션 gnb -->
           <nav class="gnb">

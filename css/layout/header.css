@@ -1,4 +1,5 @@
 .header {
+  height: 150px;
   border-bottom: 1px solid #eee;
   color: #333;
 }
@@ -8,6 +9,7 @@
   height: 32px;
   background: #f0f0f0;
   color: #333;
+  font-size: 11px;
 }
 .login-bar .inner {
   height: 100%;
@@ -28,11 +30,11 @@
 /* main-bar */
 .main-bar > .inner {
   display: grid;
-  grid-template-columns: 110px 30px 1fr;
+  grid-template-columns: 110px 30px 1fr 130px;
   grid-template-rows: 1fr 32px;
   grid-template-areas:
-  "category empty main-area"
-  "category empty gnb-menu";
+  "category empty main-area util-menu"
+  "category empty gnb-menu gnb-menu";
 }
 .goods-category {
   position: relative;
@@ -69,6 +71,178 @@
 .main-area .logo-area h1 a img {
   width: 100%;
   height: 100%
+}
+/* 검색창 영역 */
+.main-area .search-area {
+  margin-left: 30px;
+  /* border: 2px solid var(--color-main-blue); */
+  border: 2px solid blue;
+  height: 42px;
+  width: 522px;
+}
+.main-area .search-area form {
+  display: flex;
+}
+.main-area .search-area form .drop-down{
+  display: inline-block;
+  border: 0 none;
+  font-size: 12px;
+  font-weight: 400;
+  /* color: var(--color-gray-middle); */
+  color: gray;
+  height: 38px;
+  /* border-right: 1px solid var(--color-gray-light); */
+  border-right: 1px solid lightgray;
+}
+.main-area .search-area form #select-bar::-ms-expand { 
+	display: none; /* IE */
+}
+.main-area .search-area form #select-bar {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border: none;
+  width: 135px;
+  padding: 13px 12px;
+  background: url('../../images/icon/arrow.svg') no-repeat calc(100% - 12px) center;  /* 화살표 모양의 이미지 */
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+.main-area .search-area form input[type=search] {
+  border: none;
+  padding-left: 10px;
+  font-size: 14px;
+  outline: none;
+}
+.main-area .search-area form button {
+  width: 40px;
+}
+/* util-menu */
+.util-menu {
+  position: relative;
+}
+.util-menu button {
+  /* color: var(--color-black); */
+  color: #181818;
+}
+.util-menu ul {
+  display: flex;
+}
+.util-menu ul li{
+  width: 60px;
+  height: auto;
+}
+.util-menu .my-coupang button span {
+  font-size: 12px;
+}
+.util-menu .my-coupang .my-coupang-btn {
+  margin: 0 auto 7px auto;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-image: url('../../images/icon/person.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.util-menu .my-coupang .my-coupang-list {
+  position: absolute;
+  top: 64px;
+  left: -12px;
+  z-index: 99;
+  
+  display: none;
+}
+.util-menu svg{
+  position: absolute;
+  z-index: 99;
+  /* fill: var(--color-gray-middle); */
+  fill: gray;
+}
+.util-menu .my-coupang .my-coupang-list svg{
+  top: -12px;
+  left: 35px;
+}
+.util-menu .my-coupang .my-coupang-list .wrapper{
+  display: block;
+  width: 90px;
+  height: 116px;
+  padding: 8px 20px 20px;
+  /* background-color: var(--color-white);
+  border: 1px solid var(--color-gray-middle); */
+  background-color: white;
+  border: 1px solid gray;
+}
+.util-menu .my-coupang .my-coupang-list .wrapper li{
+  padding-top: 14px;
+}
+.util-menu .my-coupang .my-coupang-list .wrapper li:hover{
+  text-decoration-line: underline;
+  /* color: var(--color-main-blue); */
+  color: blue;
+}
+.util-menu .cart {
+  position: relative;
+}
+.util-menu .cart button span {
+  font-size: 12px;
+}
+.util-menu .cart .cart-btn {
+  margin: 0 auto 10px auto;
+  display: block;
+  width: 33px;
+  height: 33px;
+  background-image: url('../../images/icon/cart.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.util-menu .cart .cart-area {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  z-index: 99;
+
+  display: none;
+}
+.util-menu .cart .cart-area svg{
+  top: -11px;
+  right: 20px;
+}
+.util-menu .cart .cart-area .cart-wrapper{
+  width: 300px;
+  height: 120px;
+  padding: 20px;
+  /* background-color: var(--color-white);
+  border: 1px solid var(--color-gray-middle); */
+  background-color: #fff;
+  border: 1px solid gray;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.util-menu .cart .cart-area .cart-wrapper li{
+  width: 100%;
+}
+.util-menu .cart .cart-item-count {
+  position: absolute;
+  top: -2px;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  /* background-color: var(--color-main-blue);
+  color: var(--color-white); */
+  background-color: blue;
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 2px;
 }
 
 .gnb {
