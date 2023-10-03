@@ -26,6 +26,15 @@
 .login-bar .inner ul li:first-child {
   padding-left: 0;
 }
+.login-bar .inner ul li:nth-of-type(4),
+.login-bar .inner ul li:nth-of-type(5){
+  margin-right: 10px;
+  order: -1;
+}
+.login-bar .inner ul li:nth-of-type(5){
+  padding-left: 0;
+  margin-right: auto;
+}
 
 /* main-bar */
 .main-bar > .inner {
