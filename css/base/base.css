@@ -41,6 +41,7 @@ html {
 }
 
 body {
+  min-width: 1020px;
   /* font-family: "sans-serif";
   color: 기본 글꼴 색상;
   line-height: 행간;
