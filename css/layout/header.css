@@ -1,5 +1,6 @@
 .header {
   border-bottom: 1px solid #eee;
+  color: #333;
 }
 
 /* login-bar */
@@ -27,15 +28,60 @@
 /* main-bar */
 .main-bar > .inner {
   display: grid;
-  grid-template-columns: 110px 30px 1fr 130px;
-  grid-template-rows: 75% 25%;
+  grid-template-columns: 110px 30px 1fr;
+  grid-template-rows: 1fr 32px;
+  grid-template-areas:
+  "category empty main-area"
+  "category empty gnb-menu";
 }
 .goods-category {
   position: relative;
+  grid-area: category;
 }
-.category-btn {
+.goods-category .category-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 110px;
   height: 115px;
   background: #4285f4;
   font-size: 13px;
+  color: white;
+}
+.goods-category .category-btn .cateogry-btn-area {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+  background: url('../../images/icon/hamburger.svg') center no-repeat;
+  background-size: contain;
+}
+
+.main-area {
+  grid-area: main-area;
+  margin-top: 25px;
+}
+.main-area .logo-area {
+  width: 174px;
+  height: 41px;
+  margin: 2px 20px 0 0;
+}
+.main-area .logo-area h1 a img {
+  width: 100%;
+  height: 100%
+}
+
+.gnb {
+  grid-area: gnb-menu;
+}
+.gnb .gnb-menu {
+  height: 100%;
+}
+.gnb > ul > li {
+  display: inline-block;
+  line-height: 32px;
+}
+.gnb > ul > li:hover > a {
+  text-decoration: underline;
+  color: #4285f4;
 }
